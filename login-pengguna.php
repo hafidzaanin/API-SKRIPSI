@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "skripsi";
+$dbname = "skripsi2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -25,11 +25,8 @@ if ($conn->connect_error) {
         $response = array("error"=> false, "message" => "Login Berhasil", "User" =>  array("Id" => $row['id_pelanggan'],
                     "Nik" => $row['nik'], 
                     "Nama" => $row['nama_pelanggan'],
-                    "Id Jenis" => $row['id_jenisPelanggan'],
-                    "No Telp" => $row['no_telp'],
-                    "Id Jalur" => $row['id_jalur'],
-                    "Kecamatan" => $row['kecamatan'],
-                    "Kelurahan" => $row['kelurahan'])
+                    "Email" => $row['email'],
+                    "No Telp" => $row['no_telp'])
         );
       }   
     

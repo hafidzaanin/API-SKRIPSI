@@ -1,5 +1,5 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "skripsi") or die('unable onnect');
+$conn = mysqli_connect("localhost", "root", "", "skripsi2") or die('unable onnect');
 
 ?>

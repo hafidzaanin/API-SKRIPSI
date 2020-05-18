@@ -4,7 +4,7 @@
 	define('DB_HOST','localhost');
 	define('DB_USER','root');
 	define('DB_PASS','');
-	define('DB_NAME','skripsweet');
+	define('DB_NAME','skripsi2');
  
 	//We will upload files to this folder
 	//So one thing don't forget, also create a folder named uploads inside your project folder i.e. MyApi folder
@@ -25,7 +25,7 @@
 					//uploading file and storing it to database as well 
 					try{
 						move_uploaded_file($_FILES['pic']['tmp_name'], UPLOAD_PATH . $_FILES['pic']['name']);
-						$stmt = $conn->prepare("INSERT INTO tb_pengaduan (id_pelanggan, id_petugas, latitude, longitude, ket_pengaduan, gambar) VALUES ('101','101','$latitude','$longitude','$keterangan','".$_FILES['pic']['name']."')");
+						$stmt = $conn->prepare("INSERT INTO tb_pengaduan (id_pelanggan, id_petugas, lati, longi, ket_pengaduan, foto) VALUES ('101','101','$latitude','$longitude','$keterangan','".$_FILES['pic']['name']."')");
 						if($stmt->execute()){
 							$response['error'] = false;
 							$response['message'] = 'File uploaded successfully';
